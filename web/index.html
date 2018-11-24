@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:</p>
+ 
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.</p>
+ 
+ 
+ The Software shall be used for Good, not Evil.</p>
+ 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE. 
+
+-->
+<html>
+    <head>
+
+        <title>S188219 - JSON Parser Server Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+            body {
+                background-color: rgb(244, 244, 244);
+            }
+        </style>
+
+    </head>
+    <body>
+
+
+
+        <div class="container">
+
+            <!--Application can either: validate JSON or process results from a server -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">S188219 - JSON Parser Server Application</a></li>
+                <li><a data-toggle="tab" href="#menu1">JSON Validator</a></li>
+                <li><a data-toggle="tab" href="#menu2">Server Parser</a></li>
+
+            </ul>
+
+            <div class="tab-content">
+
+
+                <div id="home" class="tab-pane fade in active">
+
+                    <div class="container">
+                        <h2>S188219 - JSON Parser Server Application</h2>
+
+                        <p>This application is intended to handle all things JSON. 
+                            The first tab allows users to input a string and determine whether that string is valid. 
+                            The second allows students to complete their respective tasks on the assignment server</p>
+                        
+                        <strong>S188219</strong>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div id="menu1" class="tab-pane fade">
+                    <h3>JSON Validator</h3>
+                    <p>This tool takes an inputted string and determines whether it is valid JSON or not.</p>
+                    <form method="post" action="jsonvalidator">
+                        <div class="form-group">
+
+
+
+
+                            <label for="comment">Input text:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="input_json"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-default">Parse</button>
+                        
+                        
+                    </form>
+
+
+                </div>
+
+                <div id="menu2" class="tab-pane fade">
+                    <h3>Server Parser</h3>
+                    <p>This tool queries an assignment server and complete the tasks on that server.</p>
+                    <form method="post" action="serverapp">
+                        <div class="form-group">
+                            <label>Student id:</label>
+                            <input type="text" class="form-control" name="student_id" placeholder="Enter student ID">
+                        </div>
+                        
+                        
+
+                        <button style="font-size:24px">Generate File</button>
+                        
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
